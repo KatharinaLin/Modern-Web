@@ -1,0 +1,21 @@
+#Maze:
+	优化前：79行
+	优化后：91行
+    心得：感觉Maze对DOM的操作较多，然后用JQuery的话会比较简洁。
+
+#Mole:
+   优化前：116行
+   优化后：157行
+   心得：Mole 对于DOM的操作较少，感觉用不用其实差不多。
+
+
+#Fifteen Puzzle
+   优化前：256行
+   优化后：240行
+   心得：我的代码主要和逻辑有关，该省的还是省不了，所以感觉用处也不多。
+
+##优化的重点在于如何去自顶向下，逐步求精地写代码。
+
+神秘代码可用网站：
+  http://soj.sysu.edu.cn/courses.php
+  https://acm.sjtu.edu.cn/OnlineJudge/contests

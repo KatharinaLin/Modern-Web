@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>JigsawPuzzle</title>
+        <meta charset="utf-8">
+        
+        <link href="../style sheet/JigsawPuzzle.css" type="text/css" rel="stylesheet" />
+    </head>
+    <body>
+        <div id = "Whole">
+            <h1>JigsawPuzzle Game</h1>
+            <p id = "first">Click the button and choose a Jigsaw Puzzle size~</p>
+            <div id = "choice">
+                <button id = "b3" >3x3</button>
+                <button id = "b4" >4x4</button>
+                <button id = "b5" >5x5</button>
+            </div>
+            <div id = "selectShow">
+                <img id = "ex0" class = "show" src="../image/Lovely.jpg">
+                <img id = "ex1" class = "show" src="../image/panda.jpg">
+                <img id = "ex2" class = "show" src="../image/cat.jpg">
+            </div>
+            <div id = "pictures"></div>
+            <div id = "BeginButton">
+                <button id = "Start">start</button>
+                <button id = "R1">ReChoose</button>
+                <button id = "R2">Resize</button>
+            </div>
+            <div id = "showStep" class= "origin" >
+                <span>Step:</span>
+                <input type="text" id = "step" readonly="readonly" value="0" />
+            </div>
+                
+            
+            <div id = "result"></div>
+        </div>
+        <script type="text/javascript" src = "../JavaScript/JPnew.js"></script>
+        <script type="text/javascript" src="../JavaScript/jquery.js"></script>
+        <script type="text/javascript" src="../JavaScript/lodash.js"></script>
+    </body>
+</html>

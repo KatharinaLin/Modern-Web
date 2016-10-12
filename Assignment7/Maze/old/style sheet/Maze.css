@@ -1,0 +1,172 @@
+body {
+    font-size: 15pt;
+    font-family: "Century Gothic",serif;
+}
+
+/*divide the parts*/
+#left, #cener, #right {
+    display: inline-block;
+}
+/*arrange the position*/
+#left {
+    float: left;
+}
+#center {
+    float: left;
+}
+#right {
+    float: left;
+}
+
+#front {
+    margin-left: auto;
+    margin-right: auto;
+    text-align:center;
+}
+#Maze {
+    width:500px;
+    height: 320px;
+    margin-left: auto;
+    margin-right: auto;
+    display:block;
+}
+
+.wall {
+    background-color: rgb(0,128,255);
+    margin: 0px;
+    padding: 0px;
+}
+
+/*set the size of the wall and road*/
+#W1 {
+    width: 151px;
+    height: 50px;
+}
+
+#W2 {
+    width: 196px;
+    height: 50px;
+}
+
+#W3 {
+    width: 151px;
+    height: 52px;
+}
+
+#W4, #W6 {
+    width: 150px;
+    height: 151px;
+    margin-bottom: 5px; 
+}
+
+#W5 {
+    width: 100px;
+    height: 157px;
+    display: inline-block;
+    float: left;
+}
+
+#W7, #W9 {
+    width: 199px;
+    height: 51px;
+}
+
+#W8 {
+    width: 100px;
+    height: 51px;
+    border-top: 1px solid rgb(0,128,255);
+}
+
+#W10 {
+    width: 100px;
+    height: 25px;
+    border:1px solid;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(0,128,255);
+}
+
+#W8, #W7, #W9, #W4, #W6, #W2 {
+    border-bottom: 1px solid;
+}
+
+#W1, #W2, #W3, #W5, #W7, #W9 {
+    border-top:1px solid; 
+}
+
+#W1, #W4, #W6, #W5, #W7 {
+    border-left: 1px solid;
+}
+
+#W3, #W4, #W6, #W5, #W9 {
+    border-right: 1px solid;
+}
+
+#W1, #W3, #W5 {
+    border-bottom: 1px solid rgb(0,128,255);
+}
+
+#R2 {
+    width: 196px;
+    height: 50px;
+}
+#R1, #R5 {
+    width: 152px;
+    height: 50px;
+}
+#R3, #R4 {
+    width: 47px;
+    height: 151px;
+    display: inline-block;
+    float: left;
+}
+
+/*set the begin and end square*/
+#start, #end {
+    width: 42px;
+    height: 42px;
+    font-size: 20pt;
+    border:1px solid; 
+    text-align: center;
+}
+
+#start {
+    background-color: green;
+}
+
+#end {
+    background-color: purple;
+    float: right;
+}
+
+#W7, #W8, #W9 {
+    display: inline-block;
+    float: left;
+}
+
+.road:hover {
+    cursor: pointer;
+}
+.hitWall {
+    background-color: red;
+}
+#reminder {
+    margin-left: auto;
+    margin-right: auto;
+    width: 580px;
+    font-size:11pt;
+}
+p {
+    margin:10px;
+}
+/*result showing*/
+#output {
+    border: none;
+    text-align: center;
+    font-size: 15pt;
+    font-family: "Century Gothic",serif;
+    margin-bottom: 10px;
+    background-color: white;
+    width: 800px;
+}
