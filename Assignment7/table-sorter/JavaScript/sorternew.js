@@ -108,9 +108,9 @@
 				}
 			});
 		}
-		$(function() {
-			new Sorter();
-		})
+		
+	    Sorter();
+		
 	
 
 
