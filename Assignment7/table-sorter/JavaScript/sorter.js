@@ -1,5 +1,5 @@
 window.onload = function() {
-	/*
+
 	(function() {
 		var Sorter = function() {
 			this.inicialize();
@@ -112,6 +112,6 @@ window.onload = function() {
 			new Sorter();
 		})
 	})();
-	*/
+
 
 }
