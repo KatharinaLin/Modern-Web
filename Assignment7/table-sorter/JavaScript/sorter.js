@@ -1,6 +1,6 @@
 window.onload = function() {
 
-	(function() {
+	
 		var Sorter = function() {
 			this.inicialize();
 			this.getSorterColumn();
@@ -111,7 +111,7 @@ window.onload = function() {
 		$(function() {
 			new Sorter();
 		})
-	})();
+	
 
 
 }
