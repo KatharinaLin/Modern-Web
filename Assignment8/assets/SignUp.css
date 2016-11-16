@@ -1,0 +1,69 @@
+body {
+	font-size: 16pt;
+    font-family: "MV Boli";
+    color: #551A8B;
+    background-image: url(./background.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+form,#show {
+	width:700px;
+	height:300px;
+	margin-right: auto;
+	margin-left:auto;
+}
+
+h1, h2 {
+	width: 700px;
+	margin-right: auto;
+	margin-left:auto;
+	font-family: "Century Gothic",serif;
+	color: #FFB6C1;
+}
+
+#Button {
+	width: 700px;
+	height: 100px;
+	margin-right: auto;
+	margin-left: auto;
+}
+#reset, #submit {
+	font-size: 16pt;
+	background-color: 
+}
+
+.Wrong {
+	color: red;
+}
+
+#remind {
+    border: none;
+    text-align: center;
+    font-size: 15pt;
+    font-family: "Century Gothic",serif;
+    margin-bottom: 10px;
+    width: 800px;
+}
+
+.hidden {
+	opacity: 0;
+}
+
+#result {
+    font-size: 20pt;
+    font-family: "Century Gothic",serif;
+    white-space: pre-line;
+    color: red;
+    font-weight: bolder;
+    text-align: left;
+    width:650px;
+	margin-right: auto;
+	margin-left:auto;
+}
+
+#show {
+	font-size: 20pt;
+	font-weight: bolder;
+}

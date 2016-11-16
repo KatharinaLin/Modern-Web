@@ -1,0 +1,58 @@
+body {
+	background-color: white;
+	color: #8B658B;
+	font-size: 25pt;
+	font-family: "MV Boli", Garamond, serif;
+	background-image: url(http://blog.ilc.edu.tw/blog/gallery/24433/24433-1990488.jpg);
+	background-attachment: fixed;
+}
+p {
+	text-indent:50px;
+	white-space: pre-line;
+}
+h1, h2 {
+	letter-spacing:0.1em;
+}
+h1 {
+	color: white;
+	font-size: 40pt;
+	font-weight: bold;
+	text-align: center;
+	font-family: "Comic Sans MS", Verdana, serif;
+	background-image: url(http://www.aljazeera.com/mritems/Images/2016/2/5/df7a84721c1f44a6be1a08a93ec6a043_18.jpg);
+}
+h2 {
+	font-size: 32pt;
+	text-align: left;
+	font-weight: normal;
+	font-family: "Tempus Sans ITC", Verdana, serif;
+	text-decoration: underline;
+	background-color:#FAF0E6;
+	color: #FF4500;
+}
+ul {
+	white-space: pre-line;
+	list-style-image: url(http://www.easyicon.net/api/resizeApi.php?id=564012&size=32);
+	
+}
+
+img.food {
+	height: 200px;
+	width: 200px;
+}
+
+a {
+	color: #FF6A6A;
+	font-size: 20pt;
+}
+img {
+	border-style: solid;
+	border-color: #FF7F50;
+}
+button {
+	color: #8B658B;
+	font-size: 25pt;
+	font-family: "MV Boli", Garamond, serif;
+	outline-style: double;
+	outline-color: #CD9B9B;
+}

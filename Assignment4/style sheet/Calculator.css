@@ -1,0 +1,112 @@
+body {
+    font-size: 20pt;
+    background-image: url(../image/background.jpg);
+    background-repeat: repeat;
+    background-attachment: fixed;
+    margin:0px;
+    padding: 0px;
+}
+
+#Whole {
+    text-align: center;
+}
+#Whole h1 {
+    font-family: "Comic Sans MS", serif;
+    color: #00F5FF;
+    font-size: 40pt;
+    font-weight: bold;
+    padding: 0px;
+    margin-bottom: 10px;
+    background-color: black;
+}
+#Calculator {
+    border-radius: 5%;
+    border:4px solid;
+    border-color: #EECBAD;
+    width:400px;
+    height:520px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color:#FDF5E6;
+}
+#Show {
+    width: 360px;
+    height:80px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    background-color: #F5F5F5;
+    font-size: 20pt;
+    text-align: left;
+    border-radius: 3%;
+    outline: none;
+    resize: none;
+    border:2px solid #FFA07A;
+    font-family: "Lucida Handwriting";
+    font-weight: bold;
+}
+
+#Calculator .button, #OperatorEqual, #Delete, #Clear {
+    background-color:#FFF68F;
+    cursor: pointer;
+    color: #FF6A6A;
+    font-family: "MV Boli";
+    outline: none;
+    border-radius: 10%;
+    width:70px;
+    height: 70px;
+    font-size: 15pt;
+    position: absolute;
+    display: block;
+}
+#OperatorEqual:active, #Delete:active, #Clear:active {
+    background-color:red;
+}
+#Calculator .button:active {
+    background-color:red;
+}
+
+/*First column*/
+#NumOne, #NumFour, #NumSeven, #NumZero, #LeftBracket {
+    margin-left:19px;
+}
+
+/*Second Column*/
+#NumTwo, #NumEight, #NumFive, #Dot, #RightBracket {
+    margin-left:115px;
+}
+
+/*Third Column*/
+#NumThree, #NumSix, #NumNine, #Delete, #Clear {
+    margin-left:211px;
+}
+
+/*Fourth Column*/
+#OperatorDivider, #OperatorEqual, #OperatorPlus, #OperatorSubstract, #OperatorTime {
+    margin-left: 307px;
+}
+
+/*First Row*/
+#NumSeven, #NumEight, #NumNine, #OperatorDivider {
+    margin-top: 8px;
+}
+
+/*Second Row*/
+#NumFour, #NumFive, #NumSix, #OperatorTime {
+    margin-top: 90px;
+}
+
+/*Third Row*/
+#NumOne, #NumTwo, #NumThree, #OperatorSubstract {
+    margin-top: 170px;
+}
+
+/*Forth Row*/
+#OperatorPlus, #NumZero, #Dot, #Delete {
+    margin-top: 250px;
+}
+
+/*Fifth Row*/
+#Clear, #RightBracket, #LeftBracket, #OperatorEqual {
+    margin-top: 330px;
+}

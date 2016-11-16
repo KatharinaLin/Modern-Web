@@ -1,0 +1,353 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+    font-family:Arial;
+}
+
+#bottom-positioner {
+    overflow: hidden;
+    text-align: center;
+    position: absolute;
+    left:50%;
+    bottom:20px;
+    width: 500px;
+    height:500px;
+    margin-left:-250px;
+  
+}
+
+.apb {
+    width:66px;
+    height: 60px;
+    position: absolute;
+    left:50%;
+    margin-left: -33px;
+}
+
+
+
+/*original icon setting*/
+.at1 {
+    visibility: visible;
+    opacity: 1;
+    border-radius:50%;
+    border: 1px solid;
+    border-color: #989CD3;
+    width: 36px;
+    height: 36px;
+    background-image: url("../assets/images/atplus_white.png");
+    background-size: 28px 20px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #989CD3;
+    position: absolute;
+    left:50%;
+    bottom: -290px;
+    margin-left:-18px;
+    transition: all 0.3s ease-in-out 0.7s;
+    /* Firefox 4 */
+    -moz-transition:all 0.3s ease-in-out 0.7s;
+    /* Safari and Chrome */
+    -webkit-transition:all 0.3s ease-in-out 0.7s;
+    -o-transition:all 0.3s ease-in-out 0.7s;
+}
+
+/*when hover class at1 was hidden.*/
+#button:hover .at1{
+    width: 50px;
+    height: 50px;
+    background-size: 35px 25px;
+    background-image: url(../assets/images/atplus_green.png);
+    background-position: center;
+    border-color: rgba(48, 63, 159, 1);
+    background-color: rgba(48, 63, 159, 1);
+    position: absolute;
+    left: 50%;
+    bottom: -297px;
+    margin-left:-25px;
+    transition: all 0.5s ease-in-out 0.2s;
+    /* Firefox 4 */
+    -moz-transition:all 0.5s ease-in-out 0.2s;
+    /* Safari and Chrome */
+    -webkit-transition:all 0.5s ease-in-out 0.2s;
+    -o-transition:all 0.5s ease-in-out 0.2s;
+    
+}
+/*the button zone was also hidden,only leaving at1 visible*/
+#button {
+    width:0px;
+    height: 0px;
+}
+
+.icon {
+    width:0px;
+    height:0px;
+}
+
+
+
+/*position setting*/
+#control-ring-container {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    left:30%;
+    bottom: 100px;
+    width:150px;
+    height: 250px;
+    transition: all 0.5s ease-in-out 0.2s;
+    /* Firefox 4 */
+    -moz-transition:all 0.5s ease-in-out 0.2s;
+    /* Safari and Chrome */
+    -webkit-transition:all 0.5s ease-in-out 0.2s;
+    -o-transition:all 0.5s ease-in-out 0.2s;
+}
+
+
+#control-ring li {
+    list-style-type: none;
+    transition: all 0.5s ease-in-out 0.2s;
+    /* Firefox 4 */
+    -moz-transition:all 0.5s ease-in-out 0.2s;
+    /* Safari and Chrome */
+    -webkit-transition:all 0.5s ease-in-out 0.2s;
+    -o-transition:all 0.5s ease-in-out 0.2s;
+}
+#control-ring {
+    width: 0px;
+}
+
+/*characteristics of five buttons*/
+.sign.button, .setting.button, .message.button, .history.button, .mask.button {
+    opacity: 0;
+    visibility: hidden;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    bottom:52px;
+    left:85px;
+    border: 1px solid;
+    border-color: gray;
+    background-color: gray;
+    background-size: 0px 0px;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: all 0.5s ease-in-out 0.2s;
+    /* Firefox 4 */
+    -moz-transition:all 0.5s ease-in-out 0.2s;
+    /* Safari and Chrome */
+    -webkit-transition:all 0.5s ease-in-out 0.2s;
+    -o-transition:all 0.5s ease-in-out 0.2s;
+}
+.sign.button {
+    
+    background-image: url("../assets/images/signin.png");
+}
+.setting.button {
+    background-image: url("../assets/images/setting.png");
+}
+.message.button {
+    background-image: url("../assets/images/message.png");
+}
+.history.button {
+    background-image: url("../assets/images/history.png");
+}
+.mask.button {
+    background-image: url("../assets/images/nomask.png");
+}
+.unread {
+    border-radius:50%;
+    border: 1px solid;
+    border-color:red;
+    background-color:red;
+    font-size:10pt;
+    vertical-align: middle;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    width:13px;
+    height: 13px;
+    float:right;
+    position: absolute;
+    right:-6px;
+    top:-2px;
+    display: inline-block;
+}
+
+/*five buttons changes when hovered*/
+#button:hover  .history.button, #button:hover  .message.button, #button:hover  .sign.button, #button:hover  .setting.button, #button:hover  .mask.button {
+    opacity: 1;
+    visibility: visible;
+    border-radius:50%;
+    border: 1px solid;
+    border-color: gray;
+    background-color: gray;
+    background-size: 16px 16px;
+}
+
+/*position change of history button*/
+#button:hover  .history.button {
+    position: absolute;
+    bottom:53px;
+    left:20px;
+}
+
+/*position change of message button*/
+#button:hover  .message.button {
+    position: absolute;
+    bottom:18px;
+    left:33px;
+}
+
+/*position change of sign button*/
+#button:hover  .sign.button {
+    position: absolute;
+    left:110px;
+    bottom: 0px;
+}
+
+/*position change of setting button*/
+#button:hover  .setting.button {
+    position: absolute;
+    bottom: -5px;
+    left: 65px; 
+}
+
+/*position change of mask button*/
+#button:hover  .mask.button {
+    
+    position: absolute;
+    bottom: 88px;
+    left:30px;
+}
+
+
+/*let the zone showing stable when hovered*/
+#button:hover #control-ring-container {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+
+/*position setting and circle making*/
+.info {
+    opacity: 0;
+    position: absolute;
+    bottom: 165px;
+    left:250px;
+    border-radius:50%;
+    width:0px;
+    height:0px;
+    border: 1px solid;
+    border-color: gray;
+    background-color: gray;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out 0.2s;
+    /* Firefox 4 */
+    -moz-transition:all 0.5s ease-in-out 0.2s;
+    /* Safari and Chrome */
+    -webkit-transition:all 0.5s ease-in-out 0.2s;
+    -o-transition:all 0.5s ease-in-out 0.2s;
+}
+#info-bar {
+    visibility: hidden;
+    width:0px;
+    height: 0px;
+}
+
+/*rid of origin icons*/
+.info li {
+    list-style-type: none;
+}
+
+
+.info ul {
+    padding: 0px;
+    margin:0px;
+}
+
+
+/*size of info circle is changing if hovered*/
+#button:hover .info {
+    opacity: 1;
+    visibility: visible;
+    position: absolute;
+    bottom: 205px;
+    left:190px;
+    width: 120px;
+    height: 120px;
+}
+
+/*detail setting in the information bar*/
+.page.user, .page.comment, .mine.like, .mine.posted {
+    background-repeat:no-repeat;
+}
+.page.user {
+    background-image: url("../assets/images/people.png");
+    position: relative;
+    left:37px;
+    margin-top: 10px;
+    vertical-align: text-bottom;
+}
+.detailUser {
+    font-size: 15pt;
+    color:white;
+    font-weight: bold;
+    position: relative;
+    right:23px;
+}
+
+
+.page.comment {
+    background-image: url("../assets/images/comment.png");
+    position: relative;
+    left:29px;
+    bottom:-13px;
+}
+
+.detailComment {
+    color: white;
+    position: relative;
+    top:-12px;
+    left:-5px;
+    font-size:35px;
+    font-weight: bold;
+}
+.mine.like {
+    margin-top:2px;
+    background-image: url("../assets/images/like.png");
+    
+    position: relative;
+    padding-bottom: 2px;
+    top:-1px;
+    left:65px;
+}
+.mine.posted {
+    margin-top:2px;
+    background-image: url("../assets/images/post.png");
+    
+    float: left;
+    width:40%;
+    position: relative;
+    left:20px;
+}
+
+
+.detailPosted {
+    white-space: pre;
+    color: #66CDAA;
+    font-weight: bold;
+    position: relative;
+    left:6px;
+}
+
+.detailLike {
+    white-space: pre;
+    color: #66CDAA;
+    font-weight: bold;
+    position: relative;
+    left:-50px;
+}
+

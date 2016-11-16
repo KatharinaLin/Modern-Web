@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Maze</title>
+        <meta charset="utf-8">
+        
+        <link href="../style sheet/Maze.css" type="text/css" rel="stylesheet" />
+    </head>
+    <body>
+        <div id = "Whole">
+            <div id = "front">
+                <h1>The Amazing Mouse Maze!</h1>
+                <p class="word">Move your mouse over the "S" to begin.</p>
+                <div>
+                    <input type="text" id = "output" readonly="readonly" />
+                </div>
+            </div>
+            <div id = "Maze">
+                <div id = "left">
+                    <div id = "W1" class="wall"></div>
+                    <div id = "W4" class="wall"></div>
+                    <div id = "R1" class = "road">
+                        <div id = "start" class="box">S</div>
+                    </div>
+                </div>
+                <div id = "center">
+                    <div id = "W2" class="wall"></div>
+                    <div id = "R2" class="road"></div>
+                    <div id = "R3" class="road"></div>
+                    <div id = "W5" class="wall"></div>
+                    <div id = "R4" class="road"></div>
+                </div>
+                <div id = "right">
+                    <div id = "W3" class="wall"></div>
+                    <div id = "W6" class="wall"></div>
+                    <div id = "R5" class="road">
+                        <div id = "end" class="box">E</div>
+                    </div>
+                </div>
+                <div id = "bottom">
+                    <div id = "W7" class="wall"></div>
+                    <div id = "W8" class="wall"></div>
+                    <div id = "W9" class="wall"></div>
+                </div>      
+            </div>
+            <div id = "reminder">
+                <p>The object of this game is to guide the mouse cursor through the start area and get to the end area.Be sure to avoid the walls:</p>
+                <div id = "W10"></div>
+                <p>Good luck!</p>
+            </div>
+        </div>
+        <script type="text/javascript" src = "../Java Script/Maze.js"></script>
+    </body>
+</html>

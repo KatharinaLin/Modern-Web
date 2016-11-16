@@ -1,0 +1,225 @@
+body {
+    font-size: 11pt;
+    font-family: "MV Boli";
+    color: #551A8B;
+    background-image: url(../image/bg1.png);
+    background-repeat: repeat;
+    background-attachment: fixed;
+}
+
+/*middle position setting*/
+#pic, #b5, #b3, #b4, #Start, #example, #selectShow, #R1, #R2, #ex1, #output, #showStep {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 5px;
+    font-size: 40pt;
+}
+p {
+    margin:0px;
+    padding: 0px;
+    text-align: center;
+    font-size: 20pt;
+}
+
+#pic {
+    width: 400px;
+    height: 360px;
+}
+
+/*all buttons setting*/
+#b5, #b3, #b4, #Start, #R1, #R2 {
+    display: block;
+    color: red;
+    width: 150px;
+    height: 50px;
+    font-family: "Comic Sans MS";
+    font-size:20pt;
+    border-radius: 2%;
+    background-color: #FFFACD;
+}
+
+.origin, .img15, .p8, .a24 {
+    visibility: hidden;
+}
+.act {
+    visibility: visible;
+}
+
+#showStep {
+    width: 300px;
+    height: 40px;
+    font-family: "Comic Sans MS";
+    font-size:16pt;
+}
+#step {
+    font-family: "Comic Sans MS";
+    font-size:12pt;
+}
+#selectShow {
+    width: 600px;
+    height: 180px;
+}
+
+/*images src*/
+.example0 {
+    background-image: url(../image/Lovely.jpg);
+}
+.example1 {
+    background-image: url(../image/panda.jpg);
+}
+.example2 {
+    background-image: url(../image/cat.jpg);
+}
+
+/*images showing*/
+.show {
+    width: 150px;
+    height: 150px;
+    border: 2px solid yellow;
+    margin-right: 50px;
+
+    transition: all 0.5s ease-in-out 0.2s;
+    -moz-transition:all 0.5s ease-in-out 0.2s;
+    -webkit-transition:all 0.5s ease-in-out 0.2s;
+    -o-transition:all 0.5s ease-in-out 0.2s;
+}
+
+.show:hover {
+    transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    -o-transform: scale(1.05);
+}
+
+#ex0 {
+    float: left;
+}
+#ex2 {
+    float: right;
+}
+
+.Big {
+    width: 170px;
+    height:170px;
+    margin-right: 50px;
+}
+
+/*puzzle pieces changes*/
+.Block {
+    margin-top:-8px; 
+    display: inline-block;
+    border: 1px solid gray;
+    transition-property: left, top;
+    -moz-transition-property: left, top;
+    -webkit-transition-property: left, top;
+    -o-transition-property: left, top;
+
+    transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    -webkit-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+}
+.Block:hover {
+    cursor: pointer;
+    transform: scale(1.02);
+    -moz-transform: scale(1.02);
+    -webkit-transform: scale(1.02);
+    -o-transform: scale(1.02);
+}
+
+/*puzzle pieces size*/
+.img0, .img1, .img2, .img3, .img4, .img5, .img6, .img7, .img8, .img9, .img10, .img11, .img12, .img13, .img14, .img15 {
+    width: 90px;
+    height: 90px;
+}
+.p0, .p1, .p2, .p3, .p4, .p5, .p6, .p7, .p8 {
+    width: 120px;
+    height: 120px;
+}
+.a0, .a1, .a2, .a3, .a4, .a5, .a6, .a7, .a8, .a9, .a10, .a11, .a12, .a13, .a14, .a15, .a16, .a17, .a18, .a19, .a20, .a21, .a22, .a23, .a24 {
+    width: 72px;
+    height: 72px;
+}
+
+/*3 kinds of puzzle pieces' position adjusting*/
+.img0, .img1, .img2, .img3, .p0, .p1, .p2，.a0, .a1, .a2, .a3, .a3, .a4 {
+    background-position-y: 0px;
+}
+
+.p3, .p4, .p5 {
+    background-position-y: 240px;
+}
+
+.p6, .p7, .p8 {
+    background-position-y: 120px;
+}
+.p1, .p4, .p7 {
+    background-position-x:240px;
+}
+.p2, .p5, .p8 {
+    background-position-x:120px;
+}
+.img4, .img5, .img6, .img7 {
+    background-position-y: 270px;
+}
+
+.img8, .img9, .img10, .img11 {
+    background-position-y: 180px;
+}
+
+.img12, .img13, .img14, .img14 {
+    background-position-y: 90px;
+}
+
+.img0, .img4, .img8, .img12, .p0, .p3, .p6, .a0, .a5, .a10, .a15, .a20 {
+    background-position-x: 0px;
+}
+
+.img1, .img5, .img9, .img13 {
+    background-position-x: -90px;
+}
+
+.img2, .img6, .img10, .img14 {
+    background-position-x: 180px;
+}
+
+.img3, .img7, .img11, .img15 {
+    background-position-x: 90px;
+}
+
+.a5, .a6, .a7, .a8, .a9 {
+    background-position-y: 288px;
+}
+
+.a10, .a11, .a12, .a13, .a14 {
+    background-position-y: 216px;
+}
+
+.a15, .a16, .a17, .a18, .a19 {
+    background-position-y: 144px;
+}
+
+.a20, .a21, .a22, .a23, .a24 {
+    background-position-y: 72px;
+}
+
+.a1, .a6, .a11, .a16, .a21 {
+    background-position-x:288px;
+}
+
+.a2, .a7, .a12, .a17, .a22 {
+    background-position-x:216px;
+}
+
+.a3, .a8, .a13, .a18, .a23 {
+    background-position-x:144px;
+}
+
+.a4, .a9, .a14, .a19, .a24 {
+    background-position-x:72px;
+}
+

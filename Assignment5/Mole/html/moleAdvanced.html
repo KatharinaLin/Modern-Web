@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Mole</title>
+        <meta charset="utf-8">
+        <link rel="icon" sizes="196x196" href="../img/Mouse.ico">
+        <link href="../style sheet/moleAdvanced.css" type="text/css" rel="stylesheet" />
+    </head>
+    <body>
+        <div id = "Whole">
+            <h1>Whac-a-mole</h1>
+            <p class="begin">Test your skill.How many boxes(moles) can you check(hit) in 30 seconds?</p>
+            <div id = "buttons">
+                <button id = "start">Start Game | Stop Game</button>
+                <div id = "showTime">
+                    <span>Time:</span>
+                    <input type="text" id = "time" readonly="readonly" value="0" />
+                </div>
+                <div id = "end">Game Over</div>
+                <div id = "showScore">
+                    <span>Score:</span>
+                    <input type="text" id = "score" readonly="readonly" value="0" />
+                </div>
+                <!--<button id = "CloseBGM">Close BackGround Music</button>-->
+            </div>
+            <form>
+                <div id = "game"></div>
+                <audio id="bgMusic">
+                    <source = src="../Music/Attraction.mp3" type="audio/mp3">
+                </audio>
+
+            </form>
+            <div id = "instructions">
+                <p class="front">Instructions:</p>
+                <p class="Content"> 1. Click on the radio buttons(moles) as they are selected randomly by the computer.</p>
+                <p class="Content"> 2. 1 point per hit, minus 1 point per miss.</p>
+            </div>
+        </div>
+        <script type="text/javascript" src = "../Java Script/moleAdvanced.js"></script>
+    </body>
+</html>
