@@ -13,24 +13,7 @@ function start(route, handle){
     var query = url.parse(request.url).query;
     var querys = querystring.parse(query)['username'];
     console.log("Request for "+ pathname +" received.");
-    if (querys === undefined) {
-      if (pathname === '/') pathname = '/SignUp.html';
-      var realPath = "assets" + pathname;
-      var ext = path.extname(realPath);
-      ext = ext ? ext.slice(1) : 'unknown';
-      fs.readFile(realPath, function (err, data) {
-        if (err) {
-          response.writeHead(404, {'Content-Type': mime['html']});
-          fs.readFile("assets"+'/404.html', 'utf-8' ,function (err, data) {
-            response.end(data);
-          });
-        } else {
-          response.writeHead(200, {'Content-Type': mime[ext]});
-          response.write(data);
-          response.end();
-        }
-      });
-    }
+    
 
 
     request.addListener("data",function(postDataChunk){
@@ -43,7 +26,31 @@ function start(route, handle){
     request.addListener("end",function(){
       route(handle, pathname, response, postData, querys);
     });
+    
+    if (querys === undefined) {
+      if (pathname === '/') pathname = '/SignUp.html';
+      
+      console.log(pathname);
+      
+      var realPath = "assets" + pathname;
 
+      var ext = path.extname(realPath);
+      ext = ext ? ext.slice(1) : 'unknown';
+      fs.readFile(realPath, function (err, data) {
+        console.log(realPath);
+        if (err) {
+          response.writeHead(404, {'Content-Type': mime['html']});
+          fs.readFile("assets"+'/404.html', 'utf-8' ,function (err, data) {
+          response.end(data);
+          });
+        } else {
+          response.writeHead(200, {'Content-Type': mime[ext]});
+          
+          response.write(data);
+          response.end();
+        }
+      });
+    }
   }
 
   http.createServer(onRequest).listen(8000);

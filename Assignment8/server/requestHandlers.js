@@ -15,6 +15,7 @@ function start(response, postData,querys){
   console.log("Request handler 'start' was called.");
 }
 function WritePage(response, result) {
+	console.log("Request handler 'WritePage' was called.");
     var body ='<!DOCTYPE html>'+
     '<html>'+
     '<head>'+
@@ -29,7 +30,7 @@ function WritePage(response, result) {
     '<div>'+
     '<input type="text" id = "remind" class = "hidden" readonly="readonly" />'+
     '</div>'+
-    '<form action="http://localhost:8000/details" method="POST">'+
+    '<form action="http://localhost:8000/details" method="POST" name = "sign" onSubmit="return check();">'+
     'User Name: <input type="text" name="user_name">  <br />'+
     'Student Number: <input type="text" name="student_number"> <br />'+
     'Phone Number: <input type="text" name="phone_number"> <br />'+
@@ -41,13 +42,9 @@ function WritePage(response, result) {
     '<script type="text/javascript" src = "./jquery.js"></script>'+
     '</body>'+
     '</html>';
-    fs.writeFileSync("assets/Details.html",body);
-    var realPath = "assets/Details.html";
-    var ext = path.extname(realPath);
-    ext = ext ? ext.slice(1) : 'unknown';
-    var data = fs.readFileSync(realPath,'utf-8');
-    response.writeHead(200, {'Content-Type': mime[ext]});
-    response.write(data);
+    
+    response.writeHead(200, {'Content-Type': 'text/html'});
+    response.write(body);
     response.end();
 }
 function details(response, postData,querys){
@@ -70,6 +67,8 @@ function details(response, postData,querys){
     var result = RepeatJudgeMent(info, post,response);
     if (result.length != 0) {
         WritePage(response,result);
+        console.log("here is result length");
+
         return;
     }
   }
@@ -82,7 +81,6 @@ function details(response, postData,querys){
       console.log('追加内容完成');
   });
   SetUpDetailPage(response,post);
-  response.end();
 }
 
 function SetUpDetailPage(response, post) {
@@ -104,13 +102,8 @@ function SetUpDetailPage(response, post) {
     '</div>'+
     '</body>'+
     '</html>';
-    fs.writeFileSync("assets/Details.html",body);
-    var realPath = "assets/Details.html";
-    var ext = path.extname(realPath);
-    ext = ext ? ext.slice(1) : 'unknown';
-    var data = fs.readFileSync(realPath,'utf-8');
-    response.writeHead(200, {'Content-Type': mime[ext]});
-    response.write(data);
+    response.writeHead(200, {'Content-Type': 'text/html'});
+    response.write(body);
     response.end();
 }
 
@@ -159,7 +152,7 @@ function RepeatJudgeMent(info, post, response) {
 }
 
 function queryUser(response, querys) {
-    var data = fs.readFileSync('input.txt','utf-8');
+    var data = fs.readFileSync('./assets/input.txt','utf-8');
     var ss = data.toString();
     var users=ss.split('\n');
     var len = users.length;
@@ -174,7 +167,6 @@ function queryUser(response, querys) {
         post.phone_number = info[2];
         post.email = info[3];
         SetUpDetailPage(response,post);
-        response.end();
         return;
       }
     }
